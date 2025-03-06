@@ -6,7 +6,7 @@ export const Container = styled.div`
   border-radius: 10px;
 
   background-color: #171717;
-  margin-bottom: 500px;
+  box-shadow: inset 0 1px #ffffff0d;
 `;
 
 export const Content = styled.div`
