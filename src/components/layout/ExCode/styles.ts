@@ -3,7 +3,7 @@ import { inherits } from "util";
 
 export const Container = styled.div`
   width: 100%;
-  height: fit-content;
+  height: 100%;
 
   display: flex;
   flex-direction: column;
@@ -19,6 +19,13 @@ export const Options = styled.div`
   height: 50px;
 
   border: 1px solid #fff;
+`;
+
+export const SubContainer = styled.div`
+  width: 100%;
+  height: 80%;
+
+  position: relative;
 `;
 
 export const Languages = styled.button<{ $actual: boolean }>`
@@ -46,12 +53,6 @@ export const CodeBlock = styled.div`
   align-items: center;
 
   border: 1px solid #fff;
-`;
-export const SubContainer = styled.div`
-  width: 100%;
-  height: 100%;
-
-  position: relative;
 `;
 
 export const PreCode = styled.pre`
