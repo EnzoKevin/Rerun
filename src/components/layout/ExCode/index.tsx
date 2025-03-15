@@ -16,30 +16,30 @@ export default function ExCode({ code, buttons = true }: Codes) {
 
   return (
     <S.Container>
+      <S.Options>
+        {code?.map((code) => (
+          <S.Languages
+            $actual={actual == code?.id}
+            key={code?.id}
+            onClick={() => setActual(code?.id)}
+          >
+            {code.name}
+          </S.Languages>
+        ))}
+      </S.Options>
       <S.CodeBlock>
-        <S.Options>
-          {code?.map((code) => (
-            <S.Languages
-              $actual={actual == code?.id}
-              key={code?.id}
-              onClick={() => setActual(code?.id)}
-            >
-              {code.name}
-            </S.Languages>
-          ))}
-        </S.Options>
+        <S.Icon>
+          <Image
+            onClick={() => {
+              navigator.clipboard.writeText(code[actual]?.code);
+            }}
+            src={Copy}
+            height={16}
+            width={16}
+            alt=""
+          />
+        </S.Icon>
         <S.SubContainer>
-          <S.Icon>
-            <Image
-              onClick={() => {
-                navigator.clipboard.writeText(code[actual]?.code);
-              }}
-              src={Copy}
-              height={16}
-              width={16}
-              alt=""
-            />
-          </S.Icon>
           <S.PreCode>
             <S.Code>{code[actual]?.code}</S.Code>
           </S.PreCode>

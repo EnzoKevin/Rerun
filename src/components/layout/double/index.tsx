@@ -1,8 +1,13 @@
 import * as S from "./styles";
 
 interface Double {
-  left?: { id: number; title: string; text: string }[];
-  Right?: React.ReactElement;
+  left: {
+    id: number;
+    title: string;
+    text: string;
+    component: React.ReactNode;
+  };
+  Right?: React.ReactNode;
 }
 
 export default function Double({ left, Right }: Double) {
@@ -17,9 +22,9 @@ export default function Double({ left, Right }: Double) {
   return (
     <S.Container>
       <S.Left>
-        <S.Title $number={true}>{Mock[0].id}</S.Title>
-        <S.Title>{Mock[0].title}</S.Title>
-        {Mock[0].text}
+        <S.Title $number={true}>{left.id}</S.Title>
+        <S.Title>{left.title}</S.Title>
+        {left.text}
       </S.Left>
       <S.Right>{Right}</S.Right>
     </S.Container>

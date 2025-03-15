@@ -30,6 +30,6 @@ export const Title = styled.h1<{ $number?: boolean }>`
 export const P = styled.p``;
 
 export const Right = styled.div`
-  width: 50%;
+  max-width: 50%;
   height: 100%;
 `;
