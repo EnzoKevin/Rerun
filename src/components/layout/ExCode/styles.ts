@@ -3,13 +3,12 @@ import { inherits } from "util";
 
 export const Container = styled.div`
   width: 100%;
-  height: fit-content;
+  height: 100%;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px;
 
   color: white;
 `;
@@ -19,6 +18,13 @@ export const Options = styled.div`
   height: 50px;
 
   border: 1px solid #fff;
+`;
+
+export const SubContainer = styled.div`
+  width: 100%;
+  height: 100%;
+
+  overflow: auto;
 `;
 
 export const Languages = styled.button<{ $actual: boolean }>`
@@ -42,25 +48,14 @@ export const CodeBlock = styled.div`
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  border: 1px solid #fff;
-`;
-export const SubContainer = styled.div`
-  width: 100%;
-  height: 100%;
 
   position: relative;
+  border: 1px solid #fff;
 `;
 
 export const PreCode = styled.pre`
   width: 100%;
   height: 100%;
-
-  position: relative;
-  padding: 10px;
-  overflow: auto;
 `;
 
 export const Code = styled.code`
@@ -77,6 +72,8 @@ export const BtnContainer = styled.div`
   justify-content: center;
   align-items: center;
   gap: 10%;
+
+  margin-top: 20px;
 `;
 
 export const Icon = styled.figure`
@@ -84,17 +81,21 @@ export const Icon = styled.figure`
   height: 30px;
 
   position: absolute;
-  right: 20px;
+  right: 30px;
   top: 10px;
 
   cursor: pointer;
 
-  background-color: white;
+  background-color: transparent;
 
   padding: 7px;
   border-radius: 7px;
 
   transition: 0.6s linear;
+
+  ${CodeBlock}:hover & {
+    background-color: white;
+  }
 
   &:hover {
     box-shadow: inset 0 1px #fff, 0 0 30px #fff3;

@@ -1,10 +1,11 @@
 import React from "react";
 
+import * as S from "./styles";
+
 import Hero from "./Hero";
 import Guide from "./Guide";
 import Cards from "./Cards";
-
-import * as S from "./styles";
+import HowWorks from "./HowItWorks";
 
 export function InitialHome() {
   return (
@@ -12,6 +13,7 @@ export function InitialHome() {
       <Hero />
       <Guide />
       <Cards />
+      <HowWorks />
     </S.Container>
   );
 }
