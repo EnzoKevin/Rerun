@@ -1,22 +1,22 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 300px;
-  height: 340px;
-  border-radius: 10px;
-
-  background-color: #171717;
+  min-width: 326px;
+  max-width: 326px;
+  height: 390px;
+  border-radius: 24px;
+  background: #171717;
   box-shadow: inset 0 1px #ffffff0d;
+  padding: 34px 1rem;
 `;
 
 export const Content = styled.div`
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 20px;
-
-  padding: 20px 15px;
 `;
 
 export const Text = styled.div`

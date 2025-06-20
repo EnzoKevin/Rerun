@@ -4,6 +4,7 @@ import Image from "next/image";
 
 import Star from "@/components/images/icons/star.png";
 import Arrow from "@/components/images/icons/right-arrow.png";
+import Button from "@/components/layout/buttons";
 
 export default function Hero() {
   return (
@@ -14,8 +15,7 @@ export default function Hero() {
           <span>
             <Image src={Star} width={16} height={16} alt="" />
           </span>{" "}
-          Button muito colorido
-          <Image src={Arrow} width={16} height={16} alt="" />
+          We raised $17m to build the data stack for Physical AI →
         </S.ButtonGradient>
         <S.Title>The multimodal data stack</S.Title>
         <S.Text>
@@ -25,8 +25,8 @@ export default function Hero() {
           use.
         </S.Text>
         <S.BContainer>
-          <S.buttons>Try browser demo</S.buttons>
-          <S.buttons white={"false"}>explore example</S.buttons>
+          <Button text="Try browser demo" white={true} />
+          <Button text="explore example" white={false} />
         </S.BContainer>
         <S.Nota>
           <p>Rerun is open source</p>
