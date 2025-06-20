@@ -1,3 +1,4 @@
+"use client";
 import styled from "styled-components";
 
 export const buttons = styled.button<{ $white?: boolean }>`
@@ -9,7 +10,7 @@ export const buttons = styled.button<{ $white?: boolean }>`
   background-color: ${({ $white }) => ($white ? "#fff" : "#000")};
   border-radius: 10px;
 
-  border: ${({ $white }) => ($white ? "1px solid #639" : "")};
+  border: ${({ $white }) => (!$white ? "1px solid #639" : "")};
 
   display: flex;
   justify-content: space-around;
@@ -17,6 +18,8 @@ export const buttons = styled.button<{ $white?: boolean }>`
   transition: 0.2s linear;
 
   &:hover {
-    box-shadow: inset 0 1px #fff, 0 0 30px #fff3;
+    box-shadow: ${({ $white }) =>
+      $white ? "inset 0 1px #fff, 0 0 30px #fff3" : " "};
+    background-color: ${({ $white }) => ($white ? " " : "#191a1b")};
   }
 `;

@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useState } from "react";
 
 import * as S from "./styles";
@@ -49,9 +51,9 @@ export default function ExCode({ code, buttons = true }: Codes) {
         <S.BtnContainer>
           <Button
             white={true}
-            text={`${code[actual]?.name} quick start guide`}
+            children={`${code[actual]?.name} quick start guide`}
           />
-          <Button white={false} text="try browser demo" />
+          <Button white={false} children="try browser demo" />
         </S.BtnContainer>
       ) : null}
     </S.Container>

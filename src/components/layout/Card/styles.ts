@@ -1,8 +1,10 @@
+"use client";
+
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 300px;
-  height: 340px;
+  width: 326px;
+  height: 390px;
   border-radius: 10px;
 
   background-color: #171717;
@@ -14,9 +16,9 @@ export const Content = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 30px;
 
-  padding: 20px 15px;
+  padding: 30px 15px;
 `;
 
 export const Text = styled.div`
@@ -33,7 +35,7 @@ export const Title = styled.h1`
 `;
 
 export const P = styled.p`
-  font-size: 14px;
+  font-size: 15px;
 `;
 
 export const Figure = styled.figure`

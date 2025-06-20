@@ -1,4 +1,3 @@
-"use client";
 import Image from "next/image";
 import Layout from "@/components/layout";
 import { InitialHome } from "@/modules/Screens/Home";

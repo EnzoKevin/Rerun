@@ -2,13 +2,13 @@ import * as S from "./styles";
 
 interface Buttons {
   white: boolean;
-  text: string;
+  children: string;
 }
 
-export default function Button({ white, text }: Buttons) {
+export default function Button({ white, children }: Buttons) {
   return (
     <>
-      <S.buttons $white={white}>{text}</S.buttons>
+      <S.buttons $white={white}>{children}</S.buttons>
     </>
   );
 }

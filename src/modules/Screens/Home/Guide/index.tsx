@@ -1,9 +1,7 @@
 import * as S from "./styles";
 
-import Image from "next/image";
 import Texts from "@/components/layout/Texts";
 import ExCode from "@/components/layout/ExCode";
-import Button from "@/components/layout/buttons";
 
 export default function Guide() {
   const languages: any[] = [
@@ -35,11 +33,11 @@ rerun`,
         isCentered={true}
         Title="Teste"
         Text="
-     Powerful and flexible visualization for spatial and embodied AI that's shockingly easy to get started with. Simple no sign-up installation and minimal code to get up and running."
+        Powerful and flexible visualization for spatial and embodied AI that's shockingly easy to get started with. Simple no sign-up installation and minimal code to get up and running."
       />
-      <div style={{ width: 765 }}>
+      <S.CodeContainer>
         <ExCode code={languages} />
-      </div>
+      </S.CodeContainer>
     </S.container>
   );
 }

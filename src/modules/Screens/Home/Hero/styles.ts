@@ -1,42 +1,27 @@
 import styled from "styled-components";
 
-interface Button {
-  white?: boolean;
-}
-
 export const Container = styled.div`
+  max-width: 1260px;
   width: 100vw;
-  height: fit-content;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  color: #fff;
-`;
-
-export const Content = styled.div`
-  max-width: 800px;
-  width: 100%;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  gap: 30px;
+  color: #fff;
 `;
 
 export const ButtonGradient = styled.button`
-  width: fit-content;
-  height: fit-content;
+  max-width: 480px;
 
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
+  margin-bottom: 70px;
 
-  padding: 10px 20px;
+  padding: 5px 20px;
 
   border-radius: 15px;
   background: linear-gradient(
@@ -54,20 +39,37 @@ export const ButtonGradient = styled.button`
 `;
 
 export const Title = styled.h1`
-  font-size: 60px;
+  margin-bottom: 1rem;
+  font-size: 5rem;
+  font-weight: 700;
+  letter-spacing: -0.05rem;
+  line-height: 1.1;
   text-align: center;
+  margin-bottom: 1.25rem;
+  font-size: calc(2rem + 1vw);
+  letter-spacing: -0.015em;
+  word-spacing: 0.03em;
+  white-space: balance;
+  animation: svelte-wc1y15-fade-up 0.3s 0.3s ease-out both;
 `;
 
 export const Text = styled.div`
+  max-width: 38rem;
   text-align: center;
-  font-size: 20px;
+  margin-bottom: 1.7rem;
+  font-size: 17px;
+  font-weight: 400;
+  animation: svelte-wc1y15-fade-up 0.3s 0.35s ease-out both;
+  color: #b2b2bb;
 `;
 
 export const BContainer = styled.div`
   width: 100%;
 
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 20px;
 `;
 
 export const buttons = styled.button<{ white?: string }>`

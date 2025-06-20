@@ -1,5 +1,4 @@
-import React from "react";
-
+"use client";
 import * as S from "./styles";
 
 import Hero from "./Hero";

@@ -103,7 +103,7 @@ rr.log("reprojection_error", rr.Scalar(err))`,
       {Text.map((item) => (
         <Double key={item.id} left={item} Right={item.component} />
       ))}
-      <Button white={false} text="Read the documentation" />
+      <Button white={false} children="Read the documentation" />
     </S.Container>
   );
 }

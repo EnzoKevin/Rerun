@@ -10,6 +10,8 @@ export const Container = styled.div`
   align-items: center;
 
   gap: 60px;
+
+  padding: 0px 50px;
 `;
 
 export const ImageNext = styled(Image)`

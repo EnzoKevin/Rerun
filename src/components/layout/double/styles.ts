@@ -6,7 +6,13 @@ export const Container = styled.div`
   height: 250px;
 
   display: flex;
+
   gap: 20px;
+
+  @media screen and (max-width: 840px) {
+    flex-wrap: wrap;
+    margin-bottom: 250px;
+  }
 `;
 
 export const Left = styled.div`
@@ -32,4 +38,8 @@ export const P = styled.p``;
 export const Right = styled.div`
   max-width: 50%;
   height: 100%;
+
+  @media screen and (max-width: 840px) {
+    max-width: 100%;
+  }
 `;
