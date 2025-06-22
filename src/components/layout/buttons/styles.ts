@@ -17,6 +17,9 @@ export const buttons = styled.button<{ $white?: boolean }>`
 
   transition: 0.2s linear;
 
+  box-shadow: ${({ $white }) =>
+    $white ? " inset 0 1px #fff, 0 0 20px #fff3" : ""};
+
   &:hover {
     box-shadow: ${({ $white }) =>
       $white ? "inset 0 1px #fff, 0 0 30px #fff3" : " "};

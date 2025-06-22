@@ -8,10 +8,13 @@ export const Container = styled.div`
   border-radius: 10px;
 
   background-color: #171717;
+
   box-shadow: inset 0 1px #ffffff0d;
+  padding: 34px 1rem;
 `;
 
 export const Content = styled.div`
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;

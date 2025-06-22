@@ -31,7 +31,7 @@ export const ButtonGradient = styled.button`
     rgba(249, 0, 68, 1) 100%,
     rgba(0, 212, 255, 1) 100%
   );
-  transition: linear 0.5s all;
+  transition: ease 0.3s all;
 
   &:hover {
     transform: scale(1.1);
