@@ -18,7 +18,9 @@ export const ul = styled.ul`
 
   display: flex;
 
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 
   li {
     margin: 0px 0px 5px 0px;
