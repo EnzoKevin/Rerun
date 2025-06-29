@@ -14,6 +14,7 @@ export const Container = styled.div`
 
 export const ButtonGradient = styled.button`
   max-width: 480px;
+  font-size: 13px;
 
   display: flex;
   justify-content: center;
@@ -21,9 +22,9 @@ export const ButtonGradient = styled.button`
   gap: 10px;
   margin-bottom: 70px;
 
-  padding: 5px 20px;
+  padding: 0.2rem 0.75rem 0.33rem;
 
-  border-radius: 15px;
+  border-radius: 10000px;
   background: linear-gradient(
     90deg,
     rgba(65, 83, 232, 1) 0%,
@@ -31,7 +32,7 @@ export const ButtonGradient = styled.button`
     rgba(249, 0, 68, 1) 100%,
     rgba(0, 212, 255, 1) 100%
   );
-  transition: linear 0.5s all;
+  transition: ease 0.3s all;
 
   &:hover {
     transform: scale(1.1);

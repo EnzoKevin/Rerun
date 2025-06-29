@@ -28,10 +28,10 @@ rerun`,
     },
   ];
   return (
-    <S.container>
+    <S.container id="start">
       <Texts
         isCentered={true}
-        Title="Teste"
+        Title="Start visualizing in seconds"
         Text="
         Powerful and flexible visualization for spatial and embodied AI that's shockingly easy to get started with. Simple no sign-up installation and minimal code to get up and running."
       />
