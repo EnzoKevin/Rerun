@@ -1,4 +1,5 @@
 import * as S from "./styles";
+import Logo from "@/components/images/logo.png";
 
 import Image from "next/image";
 import {
@@ -45,7 +46,7 @@ export default function Header() {
           </li>
         </S.ul>
       </nav>
-      <button style={{ visibility: "hidden" }}>SearchBar</button>
+      {<button style={{ visibility: "hidden" }}>SearchBar</button>}{" "}
     </S.Header>
   );
 }
