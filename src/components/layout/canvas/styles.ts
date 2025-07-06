@@ -15,22 +15,34 @@ export const Container = styled.section`
 
 export const VideoContainer = styled.div`
   width: 100%;
-  overflow-x: auto;
 
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 10px;
 
-  position: relative;
+  @media screen and (max-width: 1700px) {
+    flex-wrap: wrap-reverse;
+  }
 `;
 
 export const ImageContainer = styled.div`
   position: relative;
   margin-top: 40px;
-  width: 400px;
-  height: 200px;
+  width: 1200px;
+  height: 400px;
 
   img {
-    object-fit: contain;
+    object-fit: fill;
+    width: 100%;
+    height: 100%;
+  }
+`;
+
+export const Hidden = styled.div`
+  visibility: visible;
+
+  @media screen and (max-width: 664px) {
+    visibility: hidden;
   }
 `;

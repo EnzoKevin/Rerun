@@ -4,125 +4,128 @@ import * as S from "./styles";
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import canvaImg from "@/components/images/canvas.png";
+import Xarrow, { Xwrapper } from "react-xarrows";
 
 export default function Canvas() {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-  const imageContainerRef = useRef<HTMLDivElement>(null);
-  const videoRefs = Array.from({ length: 5 }, () =>
-    useRef<HTMLVideoElement>(null)
-  );
-
-  const [isVideosReady, setIsVideosReady] = useState(false);
+  const [size, setSize] = useState(0);
 
   useEffect(() => {
-    const canvas = canvasRef.current;
-    const ctx = canvas?.getContext("2d");
-    const image = imageContainerRef.current;
-    const videos = videoRefs.map((ref) => ref.current);
+    const updateSize = () => setSize(window.innerWidth);
 
-    if (!canvas || !ctx || !image || videos.some((v) => v === null)) return;
+    updateSize(); // define o valor inicial
 
-    if (!isVideosReady) return; // 🚩 Só desenha se os vídeos estiverem carregados
+    window.addEventListener("resize", updateSize); // escuta redimensionamento
 
-    const updateCanvasSize = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    };
+    return () => window.removeEventListener("resize", updateSize);
+  }, []);
 
-    const drawLines = () => {
-      if (!ctx) return;
-
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-      const imageRect = image.getBoundingClientRect();
-      const imageCenterX = imageRect.left + imageRect.width / 2;
-      const imageCenterY = imageRect.top + imageRect.height / 2;
-
-      ctx.strokeStyle = "white";
-      ctx.lineWidth = 2;
-      ctx.setLineDash([6, 6]);
-
-      videos.forEach((video) => {
-        if (!video) return;
-        const rect = video.getBoundingClientRect();
-        const videoCenterX = rect.left + rect.width / 2;
-        const videoCenterY = rect.top + rect.height / 2;
-
-        ctx.beginPath();
-        ctx.moveTo(imageCenterX, imageCenterY);
-        ctx.lineTo(videoCenterX, videoCenterY);
-        ctx.stroke();
-      });
-
-      ctx.setLineDash([]);
-    };
-
-    const handleResize = () => {
-      updateCanvasSize();
-      drawLines();
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    const observer = new ResizeObserver(() => {
-      handleResize();
-    });
-
-    observer.observe(document.body);
-    observer.observe(image);
-    videos.forEach((video) => {
-      if (video) observer.observe(video);
-    });
-
-    handleResize();
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-      observer.disconnect();
-    };
-  }, [isVideosReady]); // 🚩 Só ativa quando os vídeos estão prontos
-
-  // ✅ Função para verificar se todos os vídeos estão carregados
-  const handleVideoLoaded = () => {
-    const allLoaded = videoRefs.every(
-      (ref) => ref.current && ref.current.readyState >= 1
-    );
-    if (allLoaded) {
-      setIsVideosReady(true);
-    }
-  };
-
+  useEffect(() => {
+    console.log(size);
+  }, [size]);
   return (
     <S.Container>
-      <canvas
-        ref={canvasRef}
-        style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          pointerEvents: "none",
-          zIndex: 1,
-        }}
-      />
+      <Xwrapper>
+        <>
+          <S.VideoContainer>
+            <video
+              id={`1`}
+              src={`/rerun1.mp4`}
+              autoPlay
+              loop
+              muted
+              playsInline
+            />
+            <video
+              id={`2`}
+              src={`/rerun2.mp4`}
+              autoPlay
+              loop
+              muted
+              playsInline
+            />
+            <video
+              id={`3`}
+              src={`/rerun3.mp4`}
+              autoPlay
+              loop
+              muted
+              playsInline
+            />
+            <video
+              id={`4`}
+              src={`/rerun4.mp4`}
+              autoPlay
+              loop
+              muted
+              playsInline
+            />
+            <video
+              id={`5`}
+              src={`/rerun5.mp4`}
+              autoPlay
+              loop
+              muted
+              playsInline
+            />
+          </S.VideoContainer>
+        </>
 
-      <S.VideoContainer>
-        {videoRefs.map((ref, index) => (
-          <video
-            key={index}
-            ref={ref}
-            src={`/rerun${index + 1}.mp4`}
-            autoPlay
-            loop
-            muted
-            playsInline
-            onLoadedMetadata={handleVideoLoaded}
+        <S.ImageContainer>
+          <Image id="image" src={canvaImg} alt="Imagem central" />
+        </S.ImageContainer>
+        <S.Hidden>
+          <Xarrow
+            start={"1"}
+            end={"image"}
+            startAnchor={"bottom"}
+            endAnchor={"top"}
+            dashness
+            strokeWidth={2}
+            color="gray"
           />
-        ))}
-      </S.VideoContainer>
-
-      <S.ImageContainer ref={imageContainerRef}>
-        <Image src={canvaImg} alt="Imagem central" fill />
-      </S.ImageContainer>
+          <Xarrow
+            start={"2"}
+            end={"image"}
+            startAnchor={"bottom"}
+            endAnchor={"top"}
+            dashness
+            strokeWidth={2}
+            color="gray"
+          />
+          <Xarrow
+            start={"3"}
+            end={"image"}
+            startAnchor={size <= 995 ? "right" : "bottom"}
+            endAnchor={"top"}
+            dashness
+            strokeWidth={2}
+            color="gray"
+            path={size <= 995 ? "grid" : "smooth"}
+          />
+          <Xarrow
+            start={"4"}
+            end={"image"}
+            startAnchor={size <= 995 ? "left" : "bottom"}
+            endAnchor={"top"}
+            dashness
+            strokeWidth={2}
+            color="gray"
+            path={size <= 1324 ? "grid" : "smooth"}
+            gridBreak={size <= 1324 && size >= 995 ? "59%" : ""}
+          />
+          <Xarrow
+            start={"5"}
+            end={"image"}
+            startAnchor={"bottom"}
+            endAnchor={"top"}
+            dashness
+            strokeWidth={2}
+            color="gray"
+            path={size <= 1324 && size >= 995 ? "grid" : "smooth"}
+            gridBreak={size <= 1324 && size >= 995 ? "59%" : ""}
+          />
+        </S.Hidden>
+      </Xwrapper>
     </S.Container>
   );
 }
