@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const Container = styled.div<{
+  $minWidth?: string;
+}>`
   width: 100%;
   height: 100%;
 
@@ -19,13 +21,16 @@ export const Options = styled.div`
   border: 1px solid #fff;
 `;
 
-export const SubContainer = styled.div`
+export const SubContainer = styled.div<{
+  $minHeight?: string;
+}>`
   width: 100%;
   height: 100%;
+  min-height: ${({ $minHeight }) => ($minHeight ? $minHeight : "")};
 
   overflow: auto;
 `;
-
+/* ${({ $minWidth }) => ($minWidth ? $minWidth : "fit-content")} */
 export const Languages = styled.button<{ $actual: boolean }>`
   width: fit-content;
   height: 100%;
@@ -41,8 +46,12 @@ export const Languages = styled.button<{ $actual: boolean }>`
   }
 `;
 
-export const CodeBlock = styled.div`
+export const CodeBlock = styled.div<{
+  $minHeight?: string;
+}>`
   width: 100%;
+  /*   min-height: ${({ $minHeight }) => ($minHeight ? $minHeight : "")};
+ */
   height: 100%;
 
   display: flex;
@@ -60,12 +69,10 @@ export const PreCode = styled.pre`
 export const Code = styled.code`
   width: 100%;
   height: 100%;
-  overflow: scroll;
 `;
 
 export const BtnContainer = styled.div`
   width: 100%;
-  height: fit-content;
 
   display: flex;
   justify-content: center;

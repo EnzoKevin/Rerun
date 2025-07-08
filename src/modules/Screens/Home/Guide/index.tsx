@@ -36,7 +36,7 @@ rerun`,
         Powerful and flexible visualization for spatial and embodied AI that's shockingly easy to get started with. Simple no sign-up installation and minimal code to get up and running."
       />
       <S.CodeContainer>
-        <ExCode code={languages} />
+        <ExCode code={languages} minWidth="800px" minHeight="150px" />
       </S.CodeContainer>
     </S.container>
   );

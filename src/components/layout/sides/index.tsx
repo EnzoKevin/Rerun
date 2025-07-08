@@ -30,7 +30,7 @@ export function Sides({ side }: Sides) {
         <S.Text>
           <S.H1>{side[actual].title}</S.H1>
           <S.P>{side[actual].text}</S.P>
-          <Button white={false} text="Go to Project" />
+          <Button white={false}>Go to Project</Button>
         </S.Text>
       </S.SubContainer>
     </S.Container>

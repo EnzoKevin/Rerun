@@ -12,7 +12,7 @@ export default function Open() {
             <S.subTitle>Visualization and simple log handling</S.subTitle>
             <S.Span>Dual licensed under MIT and Apache 2</S.Span>
             <S.Button>
-              <Button text="join on github" white={false} />
+              <Button white={false}>join on github</Button>
             </S.Button>
           </S.head>
           <S.listeds>
@@ -33,7 +33,7 @@ export default function Open() {
             <S.subTitle>Data management at scale</S.subTitle>
             <S.Span>Under development with select design partners</S.Span>
             <S.Button>
-              <Button text="Sign up for waitlist" white={false} />
+              <Button white={false}>Sign up for waitlist</Button>
             </S.Button>
           </S.head>
           <S.listeds>

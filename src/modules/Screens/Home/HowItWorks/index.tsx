@@ -76,7 +76,7 @@ rr.log("reprojection_error", rr.Scalar(err))`,
       id: 0,
       title: "Model",
       text: "Use the SDK to model your data and write it to storage or a live viewer. Rerun's data model, a time aware Entity Component System, makes common scenarios simple but is flexible enough to handle custom data.",
-      component: <ExCode code={languages} buttons={false} />,
+      component: <ExCode code={languages} buttons={false} minHeight="250px" />,
     },
     {
       id: 1,
@@ -94,7 +94,7 @@ rr.log("reprojection_error", rr.Scalar(err))`,
       id: 3,
       title: "Model",
       text: "Use the SDK to model your data and write it to storage or a live viewer. Rerun's data model, a time aware Entity Component System, makes common scenarios simple but is flexible enough to handle custom data.",
-      component: <ExCode code={languages} buttons={false} />,
+      component: <ExCode code={languages} buttons={false} minHeight="250px" />,
     },
   ];
 

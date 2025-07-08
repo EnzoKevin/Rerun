@@ -14,5 +14,6 @@ export const container = styled.div`
 `;
 
 export const CodeContainer = styled.div`
-  max-width: 80%;
+  max-width: 770px;
+  width: 100%;
 `;

@@ -11,13 +11,20 @@ import Button from "@/components/layout/buttons";
 interface Codes {
   code: { id: number; name: string; code: string }[];
   buttons?: boolean;
+  minWidth?: string;
+  minHeight?: string;
 }
 
-export default function ExCode({ code, buttons = true }: Codes) {
+export default function ExCode({
+  code,
+  buttons = true,
+  minWidth,
+  minHeight,
+}: Codes) {
   const [actual, setActual] = useState<number>(0);
 
   return (
-    <S.Container>
+    <S.Container $minWidth={minWidth}>
       <S.Options>
         {code?.map((code) => (
           <S.Languages
@@ -29,7 +36,7 @@ export default function ExCode({ code, buttons = true }: Codes) {
           </S.Languages>
         ))}
       </S.Options>
-      <S.CodeBlock>
+      <S.CodeBlock $minHeight={minHeight}>
         <S.Icon>
           <Image
             onClick={() => {
@@ -41,7 +48,7 @@ export default function ExCode({ code, buttons = true }: Codes) {
             alt=""
           />
         </S.Icon>
-        <S.SubContainer>
+        <S.SubContainer $minHeight={minHeight}>
           <S.PreCode>
             <S.Code>{code[actual]?.code}</S.Code>
           </S.PreCode>
