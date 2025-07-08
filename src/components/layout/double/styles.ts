@@ -36,10 +36,10 @@ export const Title = styled.h1<{ $number?: boolean }>`
 export const P = styled.p``;
 
 export const Right = styled.div`
-  max-width: 50%;
+  width: 50%;
   height: 100%;
 
   @media screen and (max-width: 840px) {
-    max-width: 100%;
+    width: 100%;
   }
 `;
