@@ -1,6 +1,6 @@
 import Image from "next/image";
 import * as S from "./styles";
-import { First, Second, Third } from "@/components/images/blog";
+import { First, Second, Third } from "@/components/assets/images/blog";
 
 export default function Blog({}) {
   return (

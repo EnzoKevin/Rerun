@@ -1,7 +1,12 @@
 import * as S from "./styles";
 
-import { Sides } from "@/components/layout/sides";
-import { Lero, Aria, Kornia, Brush } from "@/components/images/sides/export";
+import { Sides } from "@/components/sides";
+import {
+  Lero,
+  Aria,
+  Kornia,
+  Brush,
+} from "@/components/assets/images/sides/export";
 import { StaticImageData } from "next/image";
 
 export default function Community() {

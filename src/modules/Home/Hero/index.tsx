@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import Star from "@/components/images/icons/star.png";
 import Arrow from "@/components/images/icons/right-arrow.png";
-import Button from "@/components/layout/buttons";
+import Button from "@/components/buttons";
 
 export default function Hero() {
   return (

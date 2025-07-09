@@ -1,5 +1,5 @@
 import * as S from "./styles";
-import Button from "@/components/layout/buttons";
+import Button from "@/components/buttons";
 
 export default function Open() {
   return (

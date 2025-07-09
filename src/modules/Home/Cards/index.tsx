@@ -1,6 +1,6 @@
 import * as S from "./styles";
 
-import Card from "@/components/layout/Card";
+import Card from "@/components/Card";
 import CardImage from "@/components/images/Card1.svg";
 import CardImage2 from "@/components/images/Card2.svg";
 import CardImage3 from "@/components/images/Card3.svg";

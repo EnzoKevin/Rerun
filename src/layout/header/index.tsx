@@ -6,7 +6,7 @@ import {
   RerunLogo,
   GitHub,
   Linkedin,
-} from "@/components/images/icons/logo/Icons";
+} from "@/components/assets/images/icons/logo/Icons";
 import Link from "next/link";
 export default function Header() {
   return (

@@ -8,7 +8,7 @@ import HowWorks from "./HowItWorks";
 import Community from "./community";
 import Open from "./open";
 import Blog from "./Blog";
-import Canvas from "@/components/layout/canvas";
+import Canvas from "@/components/canvas";
 
 export function InitialHome() {
   return (

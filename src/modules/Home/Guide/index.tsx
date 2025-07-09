@@ -1,7 +1,7 @@
 import * as S from "./styles";
 
-import Texts from "@/components/layout/Texts";
-import ExCode from "@/components/layout/ExCode";
+import Texts from "@/components/Texts";
+import ExCode from "@/components/ExCode";
 
 export default function Guide() {
   const languages: any[] = [

@@ -1,9 +1,9 @@
 import * as S from "./styles";
 import React from "react";
 
-import Double from "@/components/layout/double";
-import ExCode from "@/components/layout/ExCode";
-import Button from "@/components/layout/buttons";
+import Double from "@/components/double";
+import ExCode from "@/components/ExCode";
+import Button from "@/components/buttons";
 
 import Image from "next/image";
 import Rerun from "@/components/images/print_Rerun.png";

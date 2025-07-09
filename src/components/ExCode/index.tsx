@@ -6,7 +6,7 @@ import * as S from "./styles";
 
 import Image from "next/image";
 import Copy from "@/components/images/icons/copy.png";
-import Button from "@/components/layout/buttons";
+import Button from "@/components/buttons";
 
 interface Codes {
   code: { id: number; name: string; code: string }[];
