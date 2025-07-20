@@ -6,8 +6,8 @@ import ExCode from "@/components/ExCode";
 import Button from "@/components/buttons";
 
 import Image from "next/image";
-import Rerun from "@/components/images/print_Rerun.png";
-import Rerun2 from "@/components/images/Rerun_2.png";
+import Rerun from "@/assets/print_Rerun.png";
+import Rerun2 from "@/assets/Rerun_2.png";
 
 export default function HowWorks() {
   const languages: any[] = [
@@ -76,7 +76,11 @@ rr.log("reprojection_error", rr.Scalar(err))`,
       id: 0,
       title: "Model",
       text: "Use the SDK to model your data and write it to storage or a live viewer. Rerun's data model, a time aware Entity Component System, makes common scenarios simple but is flexible enough to handle custom data.",
-      component: <ExCode code={languages} buttons={false} minHeight="250px" />,
+      component: (
+        <S.CodeContainer>
+          <ExCode code={languages} buttons={false} minHeight="300px" />
+        </S.CodeContainer>
+      ),
     },
     {
       id: 1,
@@ -94,15 +98,21 @@ rr.log("reprojection_error", rr.Scalar(err))`,
       id: 3,
       title: "Model",
       text: "Use the SDK to model your data and write it to storage or a live viewer. Rerun's data model, a time aware Entity Component System, makes common scenarios simple but is flexible enough to handle custom data.",
-      component: <ExCode code={languages} buttons={false} minHeight="250px" />,
+      component: (
+        <S.CodeContainer>
+          <ExCode code={languages} buttons={false} minHeight="250px" />
+        </S.CodeContainer>
+      ),
     },
   ];
 
   return (
     <S.Container>
-      {Text.map((item) => (
-        <Double key={item.id} left={item} Right={item.component} />
-      ))}
+      <S.dContainer>
+        {Text.map((item) => (
+          <Double key={item.id} left={item} Right={item.component} />
+        ))}
+      </S.dContainer>
       <Button white={false} children="Read the documentation" />
     </S.Container>
   );

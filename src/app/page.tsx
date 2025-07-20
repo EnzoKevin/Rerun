@@ -1,6 +1,6 @@
 import Image from "next/image";
-import Layout from "@/components/layout";
-import { InitialHome } from "@/modules/Screens/Home";
+import Layout from "@/layout";
+import { InitialHome } from "@/modules/Home";
 
 export default function Home() {
   return (

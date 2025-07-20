@@ -1,8 +1,8 @@
 import * as S from "./styles";
 import Image from "next/image";
 
-import Star from "@/components/images/icons/star.png";
-import Arrow from "@/components/images/icons/right-arrow.png";
+import Star from "@/assets/icons/star.png";
+import Arrow from "@/assets/icons/right-arrow.png";
 import Button from "@/components/buttons";
 
 export default function Hero() {

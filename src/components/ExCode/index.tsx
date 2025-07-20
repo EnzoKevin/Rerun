@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import * as S from "./styles";
 
 import Image from "next/image";
-import Copy from "@/components/images/icons/copy.png";
+import Copy from "@/assets/icons/copy.png";
 import Button from "@/components/buttons";
 
 interface Codes {
@@ -24,7 +24,7 @@ export default function ExCode({
   const [actual, setActual] = useState<number>(0);
 
   return (
-    <S.Container $minWidth={minWidth}>
+    <S.Container>
       <S.Options>
         {code?.map((code) => (
           <S.Languages

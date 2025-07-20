@@ -4,7 +4,7 @@ export const Container = styled.div<{
   $minWidth?: string;
 }>`
   width: 100%;
-  height: 100%;
+  min-height: 100%;
 
   display: flex;
   flex-direction: column;
@@ -25,7 +25,7 @@ export const SubContainer = styled.div<{
   $minHeight?: string;
 }>`
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   min-height: ${({ $minHeight }) => ($minHeight ? $minHeight : "")};
 
   overflow: auto;
@@ -33,7 +33,7 @@ export const SubContainer = styled.div<{
 /* ${({ $minWidth }) => ($minWidth ? $minWidth : "fit-content")} */
 export const Languages = styled.button<{ $actual: boolean }>`
   width: fit-content;
-  height: 100%;
+  min-height: 100%;
 
   padding: 10px 20px;
 
@@ -50,25 +50,29 @@ export const CodeBlock = styled.div<{
   $minHeight?: string;
 }>`
   width: 100%;
-  /*   min-height: ${({ $minHeight }) => ($minHeight ? $minHeight : "")};
- */
   height: 100%;
+  min-height: ${({ $minHeight }) => ($minHeight ? $minHeight : "")};
+  max-height: ${({ $minHeight }) => ($minHeight ? $minHeight : "")};
 
   display: flex;
   flex-direction: column;
 
   position: relative;
   border: 1px solid #fff;
+
+  @media screen and (max-width: 840px) {
+    max-height: 150px;
+  }
 `;
 
 export const PreCode = styled.pre`
   width: 100%;
-  height: 100%;
+  min-height: 100%;
 `;
 
 export const Code = styled.code`
   width: 100%;
-  height: 100%;
+  min-height: 100%;
 `;
 
 export const BtnContainer = styled.div`

@@ -2,11 +2,7 @@ import * as S from "./styles";
 import Logo from "@/components/images/logo.png";
 
 import Image from "next/image";
-import {
-  RerunLogo,
-  GitHub,
-  Linkedin,
-} from "@/components/assets/images/icons/logo/Icons";
+import { RerunLogo, GitHub, Linkedin } from "@/assets/icons/logo/Icons";
 import Link from "next/link";
 export default function Header() {
   return (

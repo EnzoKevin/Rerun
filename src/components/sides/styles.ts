@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Image from "next/image";
 
 export const Container = styled.div`
-  width: 68%;
+  width: 80%; /* 68% */
 
   display: flex;
   flex-direction: column;
@@ -63,4 +63,16 @@ export const H1 = styled.h1`
 
 export const P = styled.p`
   margin: 10px 0px 20px 0px;
+`;
+
+export const PC = styled.div`
+  @media screen and (max-width: 840px) {
+    display: none;
+  }
+`;
+
+export const Mobile = styled.div`
+  @media screen and (min-width: 840px) {
+    display: none;
+  }
 `;

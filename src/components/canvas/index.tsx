@@ -3,7 +3,7 @@
 import * as S from "./styles";
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import canvaImg from "@/components/images/canvas.png";
+import canvaImg from "@/assets/canvas.png";
 import Xarrow, { Xwrapper } from "react-xarrows";
 
 export default function Canvas() {
@@ -12,9 +12,9 @@ export default function Canvas() {
   useEffect(() => {
     const updateSize = () => setSize(window.innerWidth);
 
-    updateSize(); // define o valor inicial
+    updateSize();
 
-    window.addEventListener("resize", updateSize); // escuta redimensionamento
+    window.addEventListener("resize", updateSize);
 
     return () => window.removeEventListener("resize", updateSize);
   }, []);
