@@ -23,6 +23,12 @@ export const Article = styled.section`
   gap: 30px;
 
   box-sizing: border-box;
+
+  @media screen and (max-width: 840px) {
+    width: 100%;
+    max-width: 90%;
+    flex-direction: column;
+  }
 `;
 
 export const Title = styled.h1``;
@@ -30,8 +36,6 @@ export const Title = styled.h1``;
 export const H2 = styled.h2`
   font-size: 26.35px;
   margin: 0px 0px 1rem 0px;
-
-  font-family: "Plus Jakarta Sans";
 `;
 export const P = styled.p`
   font-size: 17px;
@@ -44,6 +48,10 @@ export const text = styled.div`
   line-height: 1.33;
 
   color: #b2b2bb;
+
+  @media screen and (max-width: 840px) {
+    width: 100%;
+  }
 `;
 
 export const NextImage = styled(Image)`
@@ -51,4 +59,9 @@ export const NextImage = styled(Image)`
   height: 250px;
 
   border-radius: 20px;
+
+  @media screen and (max-width: 840px) {
+    width: 100%;
+    height: 350px;
+  }
 `;
