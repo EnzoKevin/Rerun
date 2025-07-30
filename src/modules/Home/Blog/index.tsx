@@ -1,4 +1,3 @@
-import Image from "next/image";
 import * as S from "./styles";
 import { First, Second, Third } from "@/assets/blog";
 

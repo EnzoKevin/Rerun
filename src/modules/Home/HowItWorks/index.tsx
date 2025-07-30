@@ -5,7 +5,6 @@ import Double from "@/components/double";
 import ExCode from "@/components/ExCode";
 import Button from "@/components/buttons";
 
-import Image from "next/image";
 import Rerun from "@/assets/print_Rerun.png";
 import Rerun2 from "@/assets/Rerun_2.png";
 
